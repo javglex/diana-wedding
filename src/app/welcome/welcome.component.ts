@@ -15,9 +15,8 @@ export class WelcomeComponent implements OnInit {
   closeSlider=false;
   hideLanding=false;
   imageSources: string[] = [
-    'http://res.cloudinary.com/dustxxgvx/image/upload/v1519008643/diana_wedding/IMG_8139.jpg',
-    'http://res.cloudinary.com/dustxxgvx/image/upload/v1519008599/diana_wedding/M2D_0779.jpg',
-    'http://res.cloudinary.com/dustxxgvx/image/upload/v1519008595/diana_wedding/209-LN9_8719-Web.jpg'
+    'http://res.cloudinary.com/dustxxgvx/image/upload/v1520914120/diana_wedding/Diana_Dorsey_Favorites-0038.jpg',
+    'https://res.cloudinary.com/dustxxgvx/image/upload/v1520916201/diana_wedding/DSC_3804.jpg'
  ];
  changeImageInterval;
  selectedImageSource:string=this.imageSources[0];

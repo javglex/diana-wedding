@@ -24,16 +24,29 @@ img{
 
 
 h2{
-    font-family: 'Sacramento', cursive;
+    font-family: 'Sacramento', 'cursive';
     color:#E5C100;
 }
 
 h4, p{
-    font-family: 'Pontano Sans', sans-serif;
+    font-family: 'Pontano Sans', 'sans-serif';
+    color:rgb(90, 77, 0);
+
+}
+
+p{
+    font-size: 16px;
+    font-weight: 0.8;
+}
+
+i{
+    font-size: 17px;
+    font-weight: 0.1;
 }
 
 .bg-grey{
     background-color: rgb(255, 247, 247);
+    margin: 20px;
 }
 
 @media screen and (max-width: 768px) {

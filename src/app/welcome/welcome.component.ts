@@ -121,9 +121,9 @@ export class WelcomeComponent implements OnInit {
       if (value > 1400){
         console.log("Value greater than 1200: ",value);
         this.imageSources = [
-          'http://res.cloudinary.com/dustxxgvx/image/upload/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1920,q_70/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/v1519008595/landing_page/209-LN9_8719-Web.jpg',
-          'https://res.cloudinary.com/dustxxgvx/image/upload/v1520916201/landing_page/DSC_3804.jpg'
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1920,q_70/v1520916201/landing_page/DSC_3804.jpg'
         ];
       }
     }

@@ -1,6 +1,6 @@
-<img style="position:absolute;" [src]="imageSources[0]" (load)="imgUrl = imageSources[0]" hidden (error)="onImageLoadFail(0)" alt="...">
-<img style="position:absolute;" [src]="imageSources[1]" (load)="imgUrl = imageSources[1]" hidden (error)="onImageLoadFail(1)" alt="...">
-<img style="position:absolute;" [src]="imageSources[2]" (load)="imgUrl = imageSources[2]" hidden (error)="onImageLoadFail(2)" alt="...">
+<img style="position:absolute;" [src]="imageSources[0]"  hidden (error)="onImageLoadFail(0)" alt="...">
+<img style="position:absolute;" [src]="imageSources[1]"  hidden (error)="onImageLoadFail(1)" alt="...">
+<img style="position:absolute;" [src]="imageSources[2]"  hidden (error)="onImageLoadFail(2)" alt="...">
 
 <div *ngIf="!hideLanding" class="hero-solid" [style.maxHeight.%]="landingHeight">
   

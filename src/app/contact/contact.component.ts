@@ -16,6 +16,7 @@ export class ContactComponent implements OnInit {
   estimatedBudget;
   aboutEvent;
   eventdate;
+  foundWhere;
 
   constructor() { }
 
@@ -26,6 +27,6 @@ export class ContactComponent implements OnInit {
     this.submitted = true; 
     console.log("submitted: " + this.submitted + " email address: "+ this.emailAddress + " full name: "+this.fullName+" phone number: "+this.phoneNumber
   + " event location: "+ this.eventLocation + " guest count: " + this.guestCount + " estimated budget: " + this.estimatedBudget + " about event: " + this.aboutEvent
-  + " event date: ", this.eventdate );
+  + " event date: ", this.eventdate , " found: ", this.foundWhere );
   }
 }

@@ -46,7 +46,7 @@
               required
               [(ngModel)]="emailAddress" name="email"
               #email="ngModel"
-              placeholder="JohnDoe@Email.com">
+              placeholder="i.e JohnDoe@Email.com">
         <div [hidden]="email.valid || email.pristine"
             class="alert alert-danger">
           Email is required
@@ -60,7 +60,7 @@
               required
               [(ngModel)]="fullName" name="name"
               #name="ngModel"
-              placeholder="John Doe">
+              placeholder="i.e John Doe">
         <div [hidden]="name.valid || name.pristine"
             class="alert alert-danger">
           Full name is required
@@ -97,7 +97,7 @@
         <label for="loc">Event Location</label>
         <input type="text" class="form-control" id="loc"
                 [(ngModel)]="eventLocation" name="loc"
-                #loc="ngModel" placeholder = "Local Venue">
+                #loc="ngModel" placeholder = "i.e Local Venue">
       </div>
 
       <!-- GUEST COUNT -->
@@ -105,7 +105,7 @@
         <label for="count">Estimated Guest Count</label>
         <input type="text" class="form-control" id="count"
                 [(ngModel)]="guestCount" name="count"
-                #count="ngModel" placeholder="300">
+                #count="ngModel" placeholder="i.e 300">
       </div>
 
       <!-- BUDGET -->
@@ -113,7 +113,7 @@
         <label for="budget">Estimated Budget</label>
         <input type="text" class="form-control" id="budget"
                 [(ngModel)]="estimatedBudget" name="budget"
-                #budget="ngModel" placeholder="$5000">
+                #budget="ngModel" placeholder="i.e $5000">
       </div>
 
       <!-- ABOUT EVENT -->
@@ -125,6 +125,13 @@
         ></textarea>
       </div>
 
+      <!-- FOUND WHERE -->
+      <div class="form-group">
+        <label for="where">Where did you find us?</label>
+        <input type="text" class="form-control" id="where"
+                [(ngModel)]="foundWhere" name="where"
+                #where="ngModel" placeholder="i.e google">
+      </div>
 
       <button type="submit" class="btn btn-success btn-block" [disabled]="!contactForm.form.valid">Submit</button>
 
@@ -139,3 +146,4 @@
   </div>
 
 </div>
+<app-footer></app-footer>

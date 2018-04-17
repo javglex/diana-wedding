@@ -18,6 +18,7 @@ import { MatNativeDateModule } from '@angular/material/core';
 import { MatInputModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
+import { FooterComponent } from './footer/footer.component';
 
 const appRoutes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -25,7 +26,8 @@ const appRoutes: Routes = [
   {path:'services', component: ServicesComponent},
   {path:'testimonials', component: TestimonialsComponent},
   {path:'contact', component: ContactComponent},
-  {path:'portfolio', component: PortfolioComponent}
+  {path:'portfolio', component: PortfolioComponent},
+  {path:'*', component: WelcomeComponent}
 ];
 
 @NgModule({
@@ -37,7 +39,8 @@ const appRoutes: Routes = [
     ServicesComponent,
     TestimonialsComponent,
     ContactComponent,
-    PortfolioComponent
+    PortfolioComponent,
+    FooterComponent
   ],
   imports: [
     BrowserModule,

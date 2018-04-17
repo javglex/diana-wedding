@@ -16,17 +16,17 @@ img{
     padding:4px;
     margin:0;
     border: 1px solid rgb(204, 204, 204);
-
 }
 
-.col-sm-4{
-    margin-top:10%;
-    margin-bottom:10px;
-}
 
-h2, h3{
+h2{
     font-family: 'Sacramento', 'cursive';
     color:#E5C100;
+}
+
+h3{
+    font-family: 'Sacramento', 'cursive';
+    color:rgb(255, 114, 161);
 }
 
 h4, p{
@@ -44,6 +44,12 @@ h4, p{
 
 h1{
     color:#E5C100;
+}
+
+hr{
+    background:#E5C100;
+    height: 1px;
+    width:60%;
 }
 
 p{

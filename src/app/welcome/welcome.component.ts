@@ -1,6 +1,7 @@
 import { Component, OnInit, HostListener, ElementRef } from '@angular/core';
 import { LandingSubjectService } from '../../services/landingSubject';
 import { Router, NavigationStart, NavigationEnd } from '@angular/router';
+import { WindowSize } from '../../services/windowObs';
 
 @Component({
   selector: 'app-welcome',
@@ -14,12 +15,15 @@ export class WelcomeComponent implements OnInit {
   imageTransSpeed=4000;
   closeSlider=false;
   hideLanding=false;
+
   imageSources: string[] = [
-    'http://res.cloudinary.com/dustxxgvx/image/upload/v1520914120/diana_wedding/Diana_Dorsey_Favorites-0038.jpg',
-    'https://res.cloudinary.com/dustxxgvx/image/upload/v1520916201/diana_wedding/DSC_3804.jpg'
- ];
+    'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_956,q_41/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
+    'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_494,q_44/v1519008595/landing_page/209-LN9_8719-Web.jpg',
+    'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1520916201/landing_page/DSC_3804.jpg'
+  ];
+
  changeImageInterval;
- selectedImageSource:string=this.imageSources[0];
+ selectedImageSource:string;
  selectedImageIndex;
 
  
@@ -34,13 +38,18 @@ export class WelcomeComponent implements OnInit {
    }
 
   ngOnInit() {
+
     console.log(this.TAG,"ngOnInit fired");
+
+    this.loadWindowBasedImage();
+
     setTimeout(()=>{
       console.log(this.TAG,"timer fired");
       this.topJumbo=50;
     }, 250);
 
     this.selectedImageIndex=0;
+    this.selectedImageSource = this.imageSources[0];
     this.changeImageInterval = setInterval(()=>{
       this.selectNextImage();
       console.log(this.TAG,"new image selected");
@@ -88,5 +97,53 @@ export class WelcomeComponent implements OnInit {
   onEvent(event){
     event.stopPropagation();
   }
+
+
+  loadWindowBasedImage(){
+
+    let switchImageSet = (value) => {
+      if(value<700){
+        console.log("Value less than 600: ",value);
+        this.imageSources = [
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_956,q_41/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_494,q_44/v1519008595/landing_page/209-LN9_8719-Web.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1520916201/landing_page/DSC_3804.jpg'
+        ];
+      }else 
+      if (value > 700 && value <= 1400){
+        console.log("Value between 600 and 1200: ",value);
+        this.imageSources = [
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1537,q_59/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_682,q_58/v1519008595/landing_page/209-LN9_8719-Web.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1603,q_60/v1520916201/landing_page/DSC_3804.jpg'
+        ];
+      }else
+      if (value > 1400){
+        console.log("Value greater than 1200: ",value);
+        this.imageSources = [
+          'http://res.cloudinary.com/dustxxgvx/image/upload/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/v1519008595/landing_page/209-LN9_8719-Web.jpg',
+          'https://res.cloudinary.com/dustxxgvx/image/upload/v1520916201/landing_page/DSC_3804.jpg'
+        ];
+      }
+    }
+
+    let windowSize:WindowSize = new WindowSize();
+    windowSize.width$.subscribe(value => {
+      console.log(value);
+      switchImageSet(value);
+    });
+
+  }
+
+
+  onImageLoadFail(index){
+      console.log("failed load on image index: ",index);
+      this.imageSources[index]='../assets/images/image-error.png';
+      this.selectedImageIndex = index;
+      this.selectedImageSource = this.imageSources[this.selectedImageIndex];
+      console.log("selected resource: ",this.selectedImageSource);
+  }
+
 
 }

@@ -25,10 +25,10 @@
 }
 /* Container holding the image and the text */
 .hero-image {
-    /* Position and center the image to scale nicely on all screens */
-    background: url("http://res.cloudinary.com/dustxxgvx/image/upload/v1519008595/diana_wedding/209-LN9_8719-Web.jpg");
+
     /* Set a specific height */
     height: 100%;
+
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
@@ -38,7 +38,7 @@
     -o-background-size: cover;
     position: relative;
 
-    /**animation properties**/
+    /** animation properties **/
 	transition-property: all;
 	transition-duration: 1s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1.5);

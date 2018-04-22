@@ -72,22 +72,23 @@
     </div>
 
     <!-- reviews -->
-    <div class = "container">
-      <div>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <span class="fa fa-star checked"></span>
-          <hr style="margin-top:0;">
-          <div class="review">
-            <p>{{review.getDescription()}} </p>
-            <div class="author">- {{review.getName()}}</div>
-          </div>
+    <div class = "reviewcontainer">
+      <div class = "container animcontainer" [style.opacity]="reviewYPos" >
+        <div>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <span class="fa fa-star checked"></span>
+            <hr style="margin-top:0;">
+            <div class="review">
+              <p>{{review.getDescription()}} </p>
+              <div class="author">- {{review.getName()}}</div>
+            </div>
+        </div>
       </div>
       <div class="fas fa-chevron-left" (click) = "onBackPressed()"><p>back</p></div><div class="fas fa-chevron-right" (click) = "onNextPressed()" ><p>next</p></div>
       <a href="https://www.weddingwire.com/reviews/simply-elegant-weddings-events-san-francisco-bay-area/a5e2bbc841d35b0b.html"><h4><u>Check out more reviews here</u></h4></a>
-    </div>
-
+  </div>
   </div>
   <app-footer></app-footer>

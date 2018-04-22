@@ -7,10 +7,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TestimonialsComponent implements OnInit {
 
-
+  TAG:String = "TestimonialsComponent - ";
   reviews = [];
   review;
   reviewIndex:number;
+  reviewYPos = 1;
 
   constructor() {
 
@@ -32,10 +33,16 @@ export class TestimonialsComponent implements OnInit {
   }
 
   onNextPressed(){
-    this.reviewIndex++;
-    if (this.reviewIndex >= this.reviews.length)    //wrap
-    this.reviewIndex = 0;
-    this.review = this.reviews[this.reviewIndex];
+    this.reviewYPos = 0;
+    var hideLanding = setInterval(()=>{
+      this.reviewYPos=1;
+      this.reviewIndex++;
+      if (this.reviewIndex >= this.reviews.length)    //wrap
+        this.reviewIndex = 0;
+      this.review = this.reviews[this.reviewIndex];
+      clearInterval(hideLanding);
+      return;
+  }, 250);
   }
 
   onBackPressed(){

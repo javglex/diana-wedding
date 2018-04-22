@@ -1,3 +1,8 @@
-<p>
-  portfolio!
-</p>
+
+<div class="maindiv">
+    <div class="container">
+      <div class="row">
+        <div *ngFor="let i of counter" class="thumb col-lg-4 col-md-6 col-sm-12">{{thumbnailUrl[i]}}</div>
+      </div>
+    </div>
+</div>

@@ -21,7 +21,7 @@ h4, p, label{
 
 .review{
     text-align: left;
-    height:25vh;
+    min-height:25vh;
 }
 
 .author{
@@ -52,12 +52,22 @@ hr{
     width:10%;
 }
 
-.container{
+.reviewcontainer{
     grid-area: form;
-    height:25vh;
+    min-height:25vh;
+
     margin-top:4%;
 }
 
+.animcontainer{
+    /** animation properties **/
+	transition-property: all;
+	transition-duration: .250s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1.5);
+    transition: all .250;
+	-webkit-transition: all .250;
+	-moz-transition: all .250;
+}
 
 .reward{
     text-align:center;
@@ -118,7 +128,7 @@ hr{
 .wrapper {
     display: grid;
     grid-template-columns: 2fr 2fr;
-    grid-auto-rows: 180px 50vh 180px 180px 180px;
+    grid-auto-rows: 180px min-content 180px 180px 180px;
     grid-template-areas:
     "reward1 reward2"
     "form form"
@@ -131,7 +141,7 @@ hr{
 @media (min-width: 800px) {
     .wrapper {
         grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: 50vh 180px 180px 180px;
+        grid-template-rows: min-content 180px 180px 180px;
         grid-template-areas:
         "form form form"
         "reward1 reward2 reward3"

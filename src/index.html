@@ -17,5 +17,10 @@
 </head>
 <body>
   <app-root></app-root>
+  <script>
+    app.get('*', function (req, res) {    //fixes 404 error when going to a different router from url bar
+      res.sendfile('./dist/index.html'); // load our index.html file
+    });
+</script>
 </body>
 </html>

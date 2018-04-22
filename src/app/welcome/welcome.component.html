@@ -1,0 +1,22 @@
+<img style="position:absolute;" [src]="imageSources[0]"  hidden (error)="onImageLoadFail(0)" alt="...">
+<img style="position:absolute;" [src]="imageSources[1]"  hidden (error)="onImageLoadFail(1)" alt="...">
+<img style="position:absolute;" [src]="imageSources[2]"  hidden (error)="onImageLoadFail(2)" alt="...">
+
+<div *ngIf="!hideLanding" class="hero-solid" [style.maxHeight.%]="landingHeight">
+  
+  <div class="hero-image" [ngStyle]="{ 'background-image': 'url(' + selectedImageSource + ')'}" (click) = "onBackgroundClicked()">
+    <div class="hero-jumbotron" [style.top.%]="topJumbo" (click)="onEvent($event)">
+      <h1>Simply Elegant</h1> 
+      <h4><i>How do you want to remember your wedding?</i></h4>
+      <hr>
+      <!--<button scrollTo scrollTargetSelector="#end-page" class="button" (click) = "onEnterSiteClicked()" ><span>Enter site</span></button>-->
+      <button class="button" (click) = "onEnterSiteClicked()" ><span class="button-text">Enter site</span></button>
+
+    </div>
+  </div>
+  <!--<a id="end-page">
+  </a> -->
+</div>
+
+<app-home></app-home>
+

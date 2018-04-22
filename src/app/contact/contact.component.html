@@ -1,0 +1,149 @@
+
+<div class="wrapper">
+
+  <!-- reward 2016 -->
+  <div class="reward1">
+    <div class='ww-bca-2016 ww-reset'>
+      <a title="Simply Elegant Weddings &amp; Events Reviews" href="https://www.weddingwire.com/reviews/simply-elegant-weddings-events-san-francisco-bay-area/a5e2bbc841d35b0b.html">
+        <img alt="Simply Elegant Weddings &amp; Events Reviews" src="//www.weddingwire.com/assets/badges/BCA-2016/BCA2016-logo_2x.png" />
+      </a>
+    </div>
+  </div>
+  <!--reward 2017 -->
+  <div class="reward2">
+    <a href="https://www.weddingwire.com/reviews/simply-elegant-weddings-events-san-francisco-bay-area/a5e2bbc841d35b0b.html">
+      <img src="//www.weddingwire.com/assets/badges/BCA-2017/BCA2017-logo.png" />
+    </a>
+  </div>
+  <!-- reward 2018 -->
+  <div class="reward3">
+    <a href="https://www.weddingwire.com/reviews/simply-elegant-weddings-events-san-francisco-bay-area/a5e2bbc841d35b0b.html">
+      <img src="//www.weddingwire.com/assets/badges/BCA-2018/BCA2018-logo.png" />
+    </a>
+  </div>
+
+  <!-- reviews -->
+  <div class="reward4">
+    <div id="ww-widget-wwrated-2013" class="color-gold">
+      <a class="ww-top" target="_blank" title="Weddings, Wedding, Wedding Venues" href="https://www.weddingwire.com" draggable="false" style="user-select: none;"></a>
+      <a class="ww-bottom" target="_blank" title="Simply Elegant Weddings &amp; Events Reviews, San Francisco, San Jose, Oakland Wedding Planning" href="https://www.weddingwire.com/reviews/simply-elegant-weddings-events-san-francisco-bay-area/a5e2bbc841d35b0b.html" draggable="false" style="user-select: none;">54 Reviews</a>
+    </div>  
+  </div>
+
+
+  <!-- Contact Form -->
+  <div class="container" *ngIf = "!submitted">
+    <h1>Contact</h1>
+    <hr>
+    <h4>To learn more about our availability and pricing, please fill out the form below for a free consultation.</h4>
+    <hr>
+    <form (ngSubmit)="onSubmit()" #contactForm="ngForm" style="text-align: left" >
+
+      <!-- EMAIL ADDRESS -->
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" class="form-control" id="email"
+              required
+              [(ngModel)]="emailAddress" name="email"
+              #email="ngModel"
+              placeholder="i.e JohnDoe@Email.com">
+        <div [hidden]="email.valid || email.pristine"
+            class="alert alert-danger">
+          Email is required
+        </div>
+      </div>
+
+      <!-- FULL NAME -->
+      <div class="form-group">
+        <label for="name">Full Name</label>
+        <input type="text" class="form-control" id="name"
+              required
+              [(ngModel)]="fullName" name="name"
+              #name="ngModel"
+              placeholder="i.e John Doe">
+        <div [hidden]="name.valid || name.pristine"
+            class="alert alert-danger">
+          Full name is required
+        </div>
+      </div>
+
+      <!-- PHONE -->
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="phone" class="form-control" id="phone"
+                required
+                [(ngModel)]="phoneNumber" name="phone"
+                #phone="ngModel"
+                placeholder="(XXX) XXX - XXXX">
+        <div [hidden]="phone.valid || phone.pristine"
+              class="alert alert-danger">
+          Phone number is required
+        </div>
+      </div>
+
+      <!-- DATE PICKER -->
+      <div class="date-picker-group">
+        <label for="date">Event Date</label><br>
+        <mat-form-field>
+          <input matInput [matDatepicker]="picker" placeholder="Choose a date" name="date" [(ngModel)] = "eventdate" (focus)="picker.open()">
+          <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+      </div>
+      <br>
+
+      <!-- LOCATION -->
+      <div class="form-group">
+        <label for="loc">Event Location</label>
+        <input type="text" class="form-control" id="loc"
+                [(ngModel)]="eventLocation" name="loc"
+                #loc="ngModel" placeholder = "i.e Local Venue">
+      </div>
+
+      <!-- GUEST COUNT -->
+      <div class="form-group">
+        <label for="count">Estimated Guest Count</label>
+        <input type="text" class="form-control" id="count"
+                [(ngModel)]="guestCount" name="count"
+                #count="ngModel" placeholder="i.e 300">
+      </div>
+
+      <!-- BUDGET -->
+      <div class="form-group">
+        <label for="budget">Estimated Budget</label>
+        <input type="text" class="form-control" id="budget"
+                [(ngModel)]="estimatedBudget" name="budget"
+                #budget="ngModel" placeholder="i.e $5000">
+      </div>
+
+      <!-- ABOUT EVENT -->
+      <div class="form-group">
+        <label for="about">Tell us about your event</label>
+        <textarea class="form-control" id="about"
+          [(ngModel)]="aboutEvent" name="about"
+          #about="ngModel" rows="3"
+        ></textarea>
+      </div>
+
+      <!-- FOUND WHERE -->
+      <div class="form-group">
+        <label for="where">Where did you find us?</label>
+        <input type="text" class="form-control" id="where"
+                [(ngModel)]="foundWhere" name="where"
+                #where="ngModel" placeholder="i.e google">
+      </div>
+
+      <button type="submit" class="btn btn-success btn-block" [disabled]="!contactForm.form.valid">Submit</button>
+
+    </form>
+    <br>
+    <br>
+  </div>
+
+  <div class="container" *ngIf="submitted" style="padding-top:5%">
+    <h2>Thank you for contacting us.</h2>
+    <h4>We will respond within 24 hours. Or please feel free to contact us directly diana@booksimplyelegant.com or (510) 260-6148</h4>
+  </div>
+
+</div>
+<app-footer></app-footer>

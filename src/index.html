@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>WeddingApp</title>
+  <base href="/">
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="assets/forms.css">
+  <link href='//www.weddingwire.com/assets/global/widget.css' rel='stylesheet' type='text/css'>
+
+  <!-- icon libray -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.9/css/all.css" integrity="sha384-5SOiIsAziJl6AWe0HWRKTXlfcSHKmYV4RBF18PPJ173Kzn7jzMyFuTtk8JA7QQG1" crossorigin="anonymous">
+
+
+</head>
+<body>
+  <app-root></app-root>
+  <script>
+    app.get('*', function (req, res) {    //fixes 404 error when going to a different router from url bar
+      res.sendfile('./dist/index.html'); // load our index.html file
+    });
+</script>
+</body>
+</html>

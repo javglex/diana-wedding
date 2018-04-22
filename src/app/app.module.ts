@@ -19,6 +19,7 @@ import { MatInputModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
+import { NgbModule} from "@ng-bootstrap/ng-bootstrap";
 
 const appRoutes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -46,6 +47,7 @@ const appRoutes: Routes = [
     BrowserModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes),
+    NgbModule.forRoot(),
     FormsModule,
     MatDatepickerModule,
     MatFormFieldModule,

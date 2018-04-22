@@ -13,7 +13,11 @@ export class HeaderComponent implements OnInit {
   framerate=240;
   enabled:boolean=false;
 
-  constructor(public el: ElementRef, private landingSubject:LandingSubjectService, private router:Router) { }
+  isCollapsed = true;
+
+  constructor(public el: ElementRef, private landingSubject:LandingSubjectService, private router:Router) { 
+    this.isCollapsed = true;
+  }
 
   ngOnInit() {
     this.landingSubject.landingSelected.subscribe((selected)=>{

@@ -1,17 +1,18 @@
 <a  href="/" class="link"><img src="http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,w_688/v1519965140/diana_wedding/dianalogo.png" alt="logo"></a> <!-- logo also acts as a reset button for the page (reloads by not using routerLink) -->
 <nav class="navbar navbar-default navbar-fixed-top"
 [style.backgroundColor]="'rgba(255, 240, 245,'+opacityAmmount+')'"
-[ngStyle]="{'position':enabled ? 'relative' : 'absolute' }">
+[ngStyle]="{'position':enabled ? 'relative' : 'absolute' }" role="navigation">
   
   <div class="container" *ngIf="enabled">
     <div class="navbar-header">
-      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" (click) = "isCollapsed = !isCollapsed">
+        <span class="sr-only">Toggle navigation</span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>                        
       </button>
     </div>
-    <div class="collapse navbar-collapse" id="myNavbar" style="text-align: center;">
+    <div class="collapse navbar-collapse" id="myNavbar" style="text-align: center;" [ngbCollapse] = "isCollapsed">
       <div class="center-nav">
         <ul class="nav navbar-nav" >
           <li><a routerLink="/about">ABOUT US</a></li>

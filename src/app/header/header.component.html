@@ -1,6 +1,6 @@
 <a  href="/" class="link"><img src="http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,w_688/v1519965140/diana_wedding/dianalogo.png" alt="logo"></a> <!-- logo also acts as a reset button for the page (reloads by not using routerLink) -->
 <nav class="navbar navbar-default navbar-fixed-top"
-[style.backgroundColor]="'rgba(255, 240, 245,'+opacityAmmount+')'"
+[style.backgroundColor]="'rgba(212, 175, 55, '+opacityAmmount+')'"
 [ngStyle]="{'position':enabled ? 'relative' : 'absolute' }" role="navigation">
   
   <div class="container" *ngIf="enabled">
@@ -15,11 +15,11 @@
     <div class="collapse navbar-collapse" id="myNavbar" style="text-align: center;" [ngbCollapse] = "isCollapsed">
       <div class="center-nav">
         <ul class="nav navbar-nav" >
-          <li><a routerLink="/about">ABOUT US</a></li>
-          <li><a routerLink="/services">WEDDINGS & EVENTS</a></li>
-          <li><a routerLink="/portfolio">PORTFOLIO</a></li>
-          <li><a routerLink="/testimonials">TESTIMONIALS</a></li>
-          <li><a routerLink="/contact">CONTACT US</a></li>
+          <li><a (click) = "isCollapsed = true" routerLink="/about" [routerLinkActive]="['active']">ABOUT US</a></li>
+          <li><a (click) = "isCollapsed = true" routerLink="/services" [routerLinkActive]="['active']">WEDDINGS & EVENTS</a></li>
+          <li><a (click) = "isCollapsed = true" routerLink="/portfolio" [routerLinkActive]="['active']">PORTFOLIO</a></li>
+          <li><a (click) = "isCollapsed = true" routerLink="/testimonials" [routerLinkActive]="['active']">TESTIMONIALS</a></li>
+          <li><a (click) = "isCollapsed = true" routerLink="/contact" [routerLinkActive]="['active']">CONTACT US</a></li>
         </ul>
       </div>
     </div>

@@ -1,8 +1,23 @@
 
-<div class="maindiv">
+<div class="maindiv" (click)="onImageHide()">
     <div class="container">
       <div class="row">
-        <div *ngFor="let i of counter" class="thumb col-lg-4 col-md-6 col-sm-12">{{thumbnailUrl[i]}}</div>
+        <div class="column col-lg-4 col-md-6 col-sm-12 col-xs-12">
+          <img *ngFor="let i of col1Counter" style="width:270px; " src="{{thumbnailUrl[i]}}" alt="{{i}}" (click) = "onImageClicked(i,$event)">
+        </div>
+        <div class="column col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <img *ngFor="let i of col2Counter" style="width:270px; " src="{{thumbnailUrl[i]}}" alt="{{i}}" (click) = "onImageClicked(i,$event)">
+        </div>
+        <div class="column col-lg-4 col-md-6 col-sm-12 col-xs-12">
+            <img *ngFor="let i of col3Counter" style="width:270px; " src="{{thumbnailUrl[i]}}" alt="{{i}}" (click) = "onImageClicked(i,$event)">
+        </div>
       </div>
     </div>
+</div>
+
+<div style="text-align: center;" *ngIf="isImageExpanded">
+  <div class="largeimagecontainer" (click) = "onImageHide()">
+    <img class="largeimage" src="{{expandedImage}}" alt="largeImage" >
+    <p style="color:white;cursor: pointer;" (click) = "onImageHide()">click here to go back</p>
+  </div>
 </div>

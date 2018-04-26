@@ -1,7 +1,7 @@
 .navbar {
     margin-bottom: 0;
     background-color: #FFF0F500;
-    z-index: 9999;
+    z-index: 3;
     border: 0;
     font-size: 12px !important;
     line-height: 1.42857143 !important;
@@ -17,16 +17,16 @@
 }
 .navbar li a, .navbar .navbar-brand {
     font-family: 'Tangerine', cursive;
-    color: rgb(68, 31, 0) !important;
+    color: #EEE8AA;
 }
 .navbar-nav li a:hover, .navbar-nav li.active a {
     font-family: 'Tangerine', cursive;
-    color: rgb(31, 14, 0) !important;
-    background-color: #fff !important;
+    color: #996515 ;
+    background-color: #fff ;
 }
 .navbar-default .navbar-toggle {
     border-color: transparent;
-    color: #fff !important;
+    color: #fff;
 }
 
 .center-nav{
@@ -40,7 +40,11 @@ a{
 img{
     position: relative;
     margin:10px 0 10px 0;
-    z-index: 10000;
+    z-index: 3;
     height:100px;
 }
 
+.active{
+    background-color:	#fff;
+    color:#996515 !important;
+}

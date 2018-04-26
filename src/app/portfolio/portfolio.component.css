@@ -15,4 +15,38 @@
     padding:4px;
     margin:0;
     border: 1px solid rgb(204, 204, 204);
+    background-color: #FFF0F5;
+}
+
+img{
+    padding:10px;
+    cursor: pointer;
+    /** animation properties **/
+	transition-property: all;
+	transition-duration: .250s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1.5);
+    transition: all .250s;
+	-webkit-transition: all .250s;
+	-moz-transition: all .250s;
+}
+
+.column img:hover{
+    
+    padding:0px;
+
+}
+
+.largeimagecontainer{
+    position: fixed;
+    top:10vh;
+    background-color:#000;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+
+.largeimage{
+    height:85vh;
+    width:100vw;
+    object-fit: contain;
 }

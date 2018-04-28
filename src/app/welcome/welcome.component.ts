@@ -118,7 +118,7 @@ export class WelcomeComponent implements OnInit {
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1537,q_59/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_682,q_58/v1519008595/landing_page/209-LN9_8719-Web.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1603,q_60/v1520916201/landing_page/DSC_3804.jpg',
-          'http://res.cloudinary.com/dustxxgvx/image/uploadc_scale,h_1603,q_60/v1519008643/diana_wedding/IMG_8139.jpg'
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1603,q_60/v1519008643/diana_wedding/IMG_8139.jpg'
         ];
       }else
       if (value > 1400){

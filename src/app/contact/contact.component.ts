@@ -1,5 +1,6 @@
 import { Component, OnInit,CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { FormControl } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-contact',
@@ -18,7 +19,7 @@ export class ContactComponent implements OnInit {
   eventdate;
   foundWhere;
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   ngOnInit() {
   }
@@ -28,5 +29,28 @@ export class ContactComponent implements OnInit {
     console.log("submitted: " + this.submitted + " email address: "+ this.emailAddress + " full name: "+this.fullName+" phone number: "+this.phoneNumber
   + " event location: "+ this.eventLocation + " guest count: " + this.guestCount + " estimated budget: " + this.estimatedBudget + " about event: " + this.aboutEvent
   + " event date: ", this.eventdate , " found: ", this.foundWhere );
+
+
+  const req = this.http.post('/contact', {
+    emailaddress: this.emailAddress,
+    fullname: this.fullName,
+    phonenumber: this.phoneNumber,
+    eventlocation:this.eventLocation,
+    guestcount:this.guestCount,
+    estimatedbudget:this.estimatedBudget,
+    aboutevent:this.aboutEvent,
+    eventdate:this.eventdate,
+    found:this.foundWhere
+  })
+    .subscribe(
+      res => {
+        console.log(res);
+      },
+      err => {
+        console.log("Error occured");
+      }
+    );
+
   }
+
 }

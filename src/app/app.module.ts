@@ -20,6 +20,7 @@ import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule} from "@ng-bootstrap/ng-bootstrap";
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 const appRoutes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -45,6 +46,7 @@ const appRoutes: Routes = [
   ],
   imports: [
     BrowserModule,
+    HttpClientModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes),
     NgbModule.forRoot(),

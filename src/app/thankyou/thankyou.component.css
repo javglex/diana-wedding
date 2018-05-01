@@ -1,0 +1,22 @@
+h1{
+    color:#E5C100;
+    font-family: 'Pontano Sans', 'sans-serif';
+
+}
+
+
+h2{
+    font-family: 'Sacramento', 'cursive';
+    color:#E5C100;
+}
+
+h4, p, label{
+    font-family: 'Pontano Sans', 'sans-serif';
+    color:rgb(90, 77, 0);
+
+}
+
+a{
+    color:#E5C100;
+    text-decoration: underline;
+}

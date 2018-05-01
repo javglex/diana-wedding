@@ -24,7 +24,7 @@
 
   <!-- reviews -->
   <div class="reward4">
-    <div id="ww-widget-wwrated-2013" class="color-gold">
+    <div id="ww-widget-wwrated-2013" class="color-gold" >
       <a class="ww-top" target="_blank" title="Weddings, Wedding, Wedding Venues" href="https://www.weddingwire.com" draggable="false" style="user-select: none;"></a>
       <a class="ww-bottom" target="_blank" title="Simply Elegant Weddings &amp; Events Reviews, San Francisco, San Jose, Oakland Wedding Planning" href="https://www.weddingwire.com/reviews/simply-elegant-weddings-events-san-francisco-bay-area/a5e2bbc841d35b0b.html" draggable="false" style="user-select: none;">54 Reviews</a>
     </div>  
@@ -37,9 +37,10 @@
     <hr>
     <h4>To learn more about our availability and pricing, please fill out the form below for a free consultation.</h4>
     <hr>
+
+    <!--
     <form (ngSubmit)="onSubmit()" #contactForm="ngForm" style="text-align: left" >
 
-      <!-- EMAIL ADDRESS -->
       <div class="form-group">
         <label for="email">Email Address</label>
         <input type="email" class="form-control" id="email"
@@ -53,7 +54,6 @@
         </div>
       </div>
 
-      <!-- FULL NAME -->
       <div class="form-group">
         <label for="name">Full Name</label>
         <input type="text" class="form-control" id="name"
@@ -67,7 +67,6 @@
         </div>
       </div>
 
-      <!-- PHONE -->
       <div class="form-group">
         <label for="phone">Phone Number</label>
         <input type="phone" class="form-control" id="phone"
@@ -81,7 +80,6 @@
         </div>
       </div>
 
-      <!-- DATE PICKER -->
       <div class="date-picker-group">
         <label for="date">Event Date</label><br>
         <mat-form-field>
@@ -92,7 +90,6 @@
       </div>
       <br>
 
-      <!-- LOCATION -->
       <div class="form-group">
         <label for="loc">Event Location</label>
         <input type="text" class="form-control" id="loc"
@@ -100,7 +97,6 @@
                 #loc="ngModel" placeholder = "i.e Local Venue">
       </div>
 
-      <!-- GUEST COUNT -->
       <div class="form-group">
         <label for="count">Estimated Guest Count</label>
         <input type="text" class="form-control" id="count"
@@ -108,7 +104,6 @@
                 #count="ngModel" placeholder="i.e 300">
       </div>
 
-      <!-- BUDGET -->
       <div class="form-group">
         <label for="budget">Estimated Budget</label>
         <input type="text" class="form-control" id="budget"
@@ -116,7 +111,6 @@
                 #budget="ngModel" placeholder="i.e $5000">
       </div>
 
-      <!-- ABOUT EVENT -->
       <div class="form-group">
         <label for="about">Tell us about your event</label>
         <textarea class="form-control" id="about"
@@ -125,7 +119,6 @@
         ></textarea>
       </div>
 
-      <!-- FOUND WHERE -->
       <div class="form-group">
         <label for="where">Where did you find us?</label>
         <input type="text" class="form-control" id="where"
@@ -136,13 +129,18 @@
       <button type="submit" class="btn btn-success btn-block" [disabled]="!contactForm.form.valid">Submit</button>
 
     </form>
-    <br>
-    <br>
-  </div>
+      -->
 
-  <div class="container" *ngIf="submitted" style="padding-top:5%">
-    <h2>Thank you for contacting us.</h2>
-    <h4>We will respond within 24 hours. Or please feel free to contact us directly diana@booksimplyelegant.com or (510) 260-6148</h4>
+
+
+      <script type="text/javascript" src="//d25purrcgqtc5w.cloudfront.net/assets/widgetiframe/iframeResizer.min.js"></script>
+      <iframe style="overflow:hidden;" src="https://widget.honeybook.com/assets_users_production/companies/5525abff5a4146552b000151/widgets/honeybook_widget.html" frameBorder="0" width="100%" height="100%"></iframe>
+      <script type="text/javascript">
+        iFrameResize({checkOrigin: false});
+      </script>
+
+    <br>
+    <br>
   </div>
 
 </div>

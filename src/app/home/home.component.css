@@ -49,9 +49,26 @@ i{
     margin: 20px;
 }
 
+.right{
+
+}
+
+.left{
+
+
+}
+
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
+    }
+
+    .right{
+        margin-left:0px;
+    }
+
+    .left{
+        margin-right:0px;
     }
 }

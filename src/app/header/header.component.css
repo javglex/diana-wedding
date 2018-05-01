@@ -1,5 +1,4 @@
 .navbar {
-    margin-bottom: 0;
     background-color: #FFF0F500;
     z-index: 3;
     border: 0;
@@ -8,13 +7,24 @@
     letter-spacing: 2px;
     border-radius: 0;
     font-family: "Courier New", Courier, monospace;
-    transition-property: all;
+
+}
+
+.nonsticky{
+    position: absolute;
+    margin-top:118px;
+    transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-    transition: all 1s;
-    -webkit-transition: all 1s;
-    -moz-transition: all 1s;
+    transition: background-color 1s;
+    -webkit-transition: background-color 1s;
+    -moz-transition: background-color 1s;
 }
+
+.sticky{
+    position: fixed;
+}
+
 .navbar li a, .navbar .navbar-brand {
     font-family: 'Tangerine', cursive;
     color: #EEE8AA;
@@ -30,7 +40,10 @@
 }
 
 .center-nav{
-    display: inline-block; margin-left: auto; margin-right: auto; vertical-align: top;
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+    vertical-align: top;
 }
 
 a{
@@ -47,4 +60,8 @@ img{
 .active{
     background-color:	#fff;
     color:#996515 !important;
+}
+
+.spacecontent{
+    height:40px;
 }

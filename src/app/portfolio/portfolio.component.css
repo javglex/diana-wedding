@@ -1,3 +1,39 @@
+h2{
+    font-family: 'Sacramento', 'cursive';
+    color:#E5C100;
+}
+
+hr{
+    background:#E5C100;
+    height: 1px;
+    width:60%;
+}
+
+fas, h4, p{
+    font-family: 'Pontano Sans', 'sans-serif';
+    color:white;
+}
+
+h4 i{
+    font-size: 17px;
+    font-weight: 0.1;
+    color:rgb(90, 77, 0);
+
+}
+
+img{
+    padding:10px;
+    cursor: pointer;
+    /** animation properties **/
+	transition-property: all;
+	transition-duration: .250s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1.5);
+    transition: all .250s;
+	-webkit-transition: all .250s;
+	-moz-transition: all .250s;
+}
+
+
 .thumb{
     background-color:red;
 }
@@ -18,17 +54,6 @@
     background-color: #FFF0F5;
 }
 
-img{
-    padding:10px;
-    cursor: pointer;
-    /** animation properties **/
-	transition-property: all;
-	transition-duration: .250s;
-    transition-timing-function: cubic-bezier(0, 1, 0.5, 1.5);
-    transition: all .250s;
-	-webkit-transition: all .250s;
-	-moz-transition: all .250s;
-}
 
 .column img:hover{
     
@@ -38,7 +63,7 @@ img{
 
 .largeimagecontainer{
     position: fixed;
-    top:10vh;
+    top:5vh;
     background-color:#000;
     left: 50%;
     transform: translateX(-50%);
@@ -50,3 +75,26 @@ img{
     width:100vw;
     object-fit: contain;
 }
+
+.fa-chevron-left{
+    position:relative;
+    right:15%;
+    cursor: pointer;
+    font-size:2em;
+
+}
+.fa-chevron-right{
+    position:relative;
+    left: 15%;
+    cursor: pointer;
+    font-size:2em;
+}
+
+.fa-window-close{
+    left:90vw;
+    font-size:45px;
+    padding:0px;
+    color:white;
+    position:absolute;
+}
+

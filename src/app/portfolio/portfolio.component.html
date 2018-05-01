@@ -1,3 +1,8 @@
+<h2>Gallery</h2>
+<hr>
+<div style = "margin: 0 20% 0 20% ">
+  <h4><i>At Simply Elegant we make sure our photographers capture the most joyful and important moments. Enjoy some of our favorite picks!</i></h4>
+</div>
 
 <div class="maindiv" (click)="onImageHide()">
     <div class="container">
@@ -13,11 +18,14 @@
         </div>
       </div>
     </div>
+    <app-footer></app-footer>
 </div>
 
 <div style="text-align: center;" *ngIf="isImageExpanded">
-  <div class="largeimagecontainer" (click) = "onImageHide()">
+  <div class="largeimagecontainer">
+    <div class="fas fa-window-close" (click) = "onImageHide()"></div>
     <img class="largeimage" src="{{expandedImage}}" alt="largeImage" >
-    <p style="color:white;cursor: pointer;" (click) = "onImageHide()">click here to go back</p>
+    <div class="fas fa-chevron-left" (click) = "onBackPressed($event)"><p>back</p></div><div class="fas fa-chevron-right" (click) = "onNextPressed($event)" ><p>next</p></div>
   </div>
 </div>
+

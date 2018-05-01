@@ -21,6 +21,7 @@ import { PortfolioComponent } from './portfolio/portfolio.component';
 import { FooterComponent } from './footer/footer.component';
 import { NgbModule} from "@ng-bootstrap/ng-bootstrap";
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { ThankyouComponent } from './thankyou/thankyou.component';
 
 const appRoutes: Routes = [
   {path:'', component: WelcomeComponent},
@@ -29,6 +30,7 @@ const appRoutes: Routes = [
   {path:'testimonials', component: TestimonialsComponent},
   {path:'contact', component: ContactComponent},
   {path:'portfolio', component: PortfolioComponent},
+  {path:'thankyou', component: ThankyouComponent},
   {path:'*', component: WelcomeComponent}
 ];
 
@@ -42,7 +44,8 @@ const appRoutes: Routes = [
     TestimonialsComponent,
     ContactComponent,
     PortfolioComponent,
-    FooterComponent
+    FooterComponent,
+    ThankyouComponent
   ],
   imports: [
     BrowserModule,

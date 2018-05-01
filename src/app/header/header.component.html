@@ -1,7 +1,7 @@
 <a  href="/" class="link"><img src="http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,w_688/v1519965140/diana_wedding/dianalogo.png" alt="logo"></a> <!-- logo also acts as a reset button for the page (reloads by not using routerLink) -->
 <nav class="navbar navbar-default navbar-fixed-top"
 [style.backgroundColor]="'rgba(212, 175, 55, '+opacityAmmount+')'"
-[ngStyle]="{'position':enabled ? 'relative' : 'absolute' }" role="navigation">
+[ngClass]="{'sticky': isFixed, 'nonsticky':!isFixed }" role="navigation">
   
   <div class="container" *ngIf="enabled">
     <div class="navbar-header">
@@ -25,3 +25,4 @@
     </div>
   </div>
 </nav>
+<div class="spacecontent"></div>

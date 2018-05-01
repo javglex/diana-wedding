@@ -10,12 +10,12 @@ export class PortfolioComponent implements OnInit {
   TAG:String = "PortfolioComponent -";
   isImageExpanded:Boolean=false;
   expandedImage:String="";
+  index=0;
 
   thumbnailUrl: String[] = [
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/_IEN0490.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/_IEN0574.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/018.jpg",  
-    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/087.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/1253.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/1206.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/1181.jpg",
@@ -41,14 +41,17 @@ export class PortfolioComponent implements OnInit {
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524541430/diana_wedding/Mary-Josh-Wedding-0113.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539720/diana_wedding/IMG_9024.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539987/diana_wedding/Ursula_Dan_Orr_Wedding_9_4_2016_img17.jpg",
-    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539971/diana_wedding/WRP_BA547.jpg"
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539971/diana_wedding/WRP_BA547.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539978/diana_wedding/WRP_KM683.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539988/diana_wedding/WRP_KM816.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539992/diana_wedding/WRP_KM898.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/087.jpg",  
   ];
 
   expandImageUrl:String[]=[
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/_IEN0490.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/_IEN0574.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/018.jpg",  
-    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/087.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/1253.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/1206.jpg",  
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/1181.jpg",
@@ -74,7 +77,12 @@ export class PortfolioComponent implements OnInit {
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524541430/diana_wedding/Mary-Josh-Wedding-0113.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539720/diana_wedding/IMG_9024.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539987/diana_wedding/Ursula_Dan_Orr_Wedding_9_4_2016_img17.jpg",
-    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539971/diana_wedding/WRP_BA547.jpg"
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539971/diana_wedding/WRP_BA547.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539978/diana_wedding/WRP_KM683.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539988/diana_wedding/WRP_KM816.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539992/diana_wedding/WRP_KM898.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/087.jpg"
+
   ]
 
   col1Counter=[];
@@ -93,6 +101,7 @@ export class PortfolioComponent implements OnInit {
   onImageClicked(index:number, event){
     console.log("on image clicked fired");
     this.isImageExpanded=true;
+    this.index=index;
     this.expandedImage = this.expandImageUrl[index];
     event.stopPropagation();
   }
@@ -100,4 +109,15 @@ export class PortfolioComponent implements OnInit {
   onImageHide(){
     this.isImageExpanded=false;
   }
+
+  onBackPressed(event){
+    this.expandedImage=this.expandImageUrl[--this.index];
+    event.stopPropagation();
+  }
+
+  onNextPressed(event){
+    this.expandedImage=this.expandImageUrl[++this.index];
+    event.stopPropagation();
+  }
+
 }

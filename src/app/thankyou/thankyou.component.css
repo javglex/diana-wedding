@@ -1,17 +1,16 @@
 h1{
     color:#E5C100;
-    font-family: 'Pontano Sans', 'sans-serif';
-
+    font-family: 'Playfair Display', serif;
 }
 
 
 h2{
-    font-family: 'Sacramento', 'cursive';
+    font-family: 'Playfair Display', serif;
     color:#E5C100;
 }
 
 h4, p, label{
-    font-family: 'Pontano Sans', 'sans-serif';
+    font-family: 'Playfair Display', serif;
     color:rgb(90, 77, 0);
 
 }

@@ -2,8 +2,6 @@ img{
     width:100%;
 }
 
-
-
 hr{
     background:#E5C100;
     height: 1px;
@@ -11,12 +9,12 @@ hr{
 }
 
 h2{
-    font-family: 'Sacramento', 'cursive';
+    font-family: 'Playfair Display', serif;
     color:#E5C100;
 }
 
 h4, p{
-    font-family: 'Pontano Sans', 'sans-serif';
+    font-family: 'Playfair Display', serif;
     color:rgb(90, 77, 0);
 
 }
@@ -37,14 +35,7 @@ i{
     margin: 20px;
 }
 
-.right{
 
-}
-
-.left{
-
-
-}
 .maindiv-closed{
     position:fixed;
 }
@@ -68,13 +59,5 @@ i{
     .col-sm-4 {
         text-align: center;
         margin: 25px 0;
-    }
-
-    .right{
-        margin-left:0px;
-    }
-
-    .left{
-        margin-right:0px;
     }
 }

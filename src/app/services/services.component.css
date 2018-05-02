@@ -20,17 +20,17 @@ img{
 
 
 h2{
-    font-family: 'Sacramento', 'cursive';
+    font-family: 'Playfair Display', serif;
     color:#E5C100;
 }
 
 h3{
-    font-family: 'Sacramento', 'cursive';
-    color:rgb(255, 114, 161);
+    font-family: 'Playfair Display', serif;
+    color:#E5C100;
 }
 
 h4, p{
-    font-family: 'Pontano Sans', 'sans-serif';
+    font-family: 'Playfair Display', serif;
     color:rgb(90, 77, 0);
 
 }

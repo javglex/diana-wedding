@@ -1,5 +1,5 @@
 h2{
-    font-family: 'Sacramento', 'cursive';
+    font-family: 'Playfair Display', serif;
     color:#E5C100;
 }
 
@@ -10,7 +10,7 @@ hr{
 }
 
 fas, h4, p{
-    font-family: 'Pontano Sans', 'sans-serif';
+    font-family: 'Playfair Display', serif;
     color:white;
 }
 
@@ -51,7 +51,7 @@ img{
     padding:4px;
     margin:0;
     border: 1px solid rgb(204, 204, 204);
-    background-color: #FFF0F5;
+    background-color: rgb(255, 247, 247);;
 }
 
 

@@ -1,3 +1,28 @@
+
+h1{
+    font-family: 'Great Vibes', cursive;
+    color:rgb(73, 62, 0);
+
+}
+
+h4{
+    font-family: 'Great Vibes', cursive;
+    color:rgb(90, 77, 0);
+    font-size:20px;
+}
+
+h2 {
+    font-size: 24px;
+    text-transform: uppercase;
+    color: #303030;
+    font-weight: 600;
+    margin-bottom: 30px;
+}
+
+body, html {
+    height: 100%;
+}
+
 .container-fluid {
     padding: 60px 50px;
 }
@@ -16,7 +41,7 @@
     max-height: 500px; /* approximate max height */
     
     /**animation properties**/
-	transition-property: all;
+	transition-property: b;
 	transition-duration: 2s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1.5);
     transition: all 2s;
@@ -47,15 +72,6 @@
 	-moz-transition: all 1s;
 }
 
-h2 {
-    font-size: 24px;
-    text-transform: uppercase;
-    color: #303030;
-    font-weight: 600;
-    margin-bottom: 30px;
-}
-
-
 
 /* Centered jumbotron */
 .hero-jumbotron {
@@ -78,10 +94,6 @@ h2 {
 	-moz-transition: all 1s;
 }
 
-
-body, html {
-    height: 100%;
-}
 .button {
     border-radius: 8px;
     background-color: #FFF0F5;
@@ -121,17 +133,7 @@ body, html {
     right: 0;
 }
 
-h1{
-    font-family: 'Sacramento', cursive;
-    color:rgb(73, 62, 0);
-
-}
-
-h4{
-    font-family: 'Pontano Sans', sans-serif;
-    color:rgb(90, 77, 0);
-}
-
 .button-text{
-    font-family: 'Sacramento', sans-serif;
+    font-family: 'Playfair Display', serif;
+
 }

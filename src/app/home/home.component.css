@@ -2,6 +2,49 @@ img{
     width:100%;
 }
 
+
+
+hr{
+    background:#E5C100;
+    height: 1px;
+    width:60%;
+}
+
+h2{
+    font-family: 'Sacramento', 'cursive';
+    color:#E5C100;
+}
+
+h4, p{
+    font-family: 'Pontano Sans', 'sans-serif';
+    color:rgb(90, 77, 0);
+
+}
+
+p{
+    font-size: 16px;
+    font-weight: 0.8;
+}
+
+i{
+    font-size: 18px;
+    color:rgb(100, 85, 0);
+    font-weight: 0.1;
+}
+
+.bg-grey{
+    background-color: rgb(255, 247, 247);
+    margin: 20px;
+}
+
+.right{
+
+}
+
+.left{
+
+
+}
 .maindiv-closed{
     position:fixed;
 }
@@ -21,43 +64,6 @@ img{
     text-align:left;
     border: 1px solid rgb(204, 204, 204);
 }
-
-
-h2{
-    font-family: 'Sacramento', 'cursive';
-    color:#E5C100;
-}
-
-h4, p{
-    font-family: 'Pontano Sans', 'sans-serif';
-    color:rgb(90, 77, 0);
-
-}
-
-p{
-    font-size: 16px;
-    font-weight: 0.8;
-}
-
-i{
-    font-size: 17px;
-    font-weight: 0.1;
-}
-
-.bg-grey{
-    background-color: rgb(255, 247, 247);
-    margin: 20px;
-}
-
-.right{
-
-}
-
-.left{
-
-
-}
-
 @media screen and (max-width: 768px) {
     .col-sm-4 {
         text-align: center;

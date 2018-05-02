@@ -45,7 +45,11 @@ export class PortfolioComponent implements OnInit {
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539978/diana_wedding/WRP_KM683.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539988/diana_wedding/WRP_KM816.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539992/diana_wedding/WRP_KM898.jpg",
-    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/087.jpg",  
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1524539589/diana_wedding/087.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1525154575/diana_wedding/_IEN3689.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1525154577/diana_wedding/DSC_3117.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1525154562/diana_wedding/TK___Moung_-863.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_280,q_60,c_limit/v1525154579/diana_wedding/Tahoe-237.jpg"
   ];
 
   expandImageUrl:String[]=[
@@ -81,8 +85,11 @@ export class PortfolioComponent implements OnInit {
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539978/diana_wedding/WRP_KM683.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539988/diana_wedding/WRP_KM816.jpg",
     "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539992/diana_wedding/WRP_KM898.jpg",
-    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/087.jpg"
-
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1524539589/diana_wedding/087.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1525154575/diana_wedding/_IEN3689.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1525154577/diana_wedding/DSC_3117.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1525154562/diana_wedding/TK___Moung_-863.jpg",
+    "http://res.cloudinary.com/dustxxgvx/image/upload/w_1400,q_80,c_limit/v1525154579/diana_wedding/Tahoe-237.jpg"
   ]
 
   col1Counter=[];
@@ -93,8 +100,10 @@ export class PortfolioComponent implements OnInit {
 
   ngOnInit() {
     this.col1Counter = new Array(Math.round(this.thumbnailUrl.length/3)).fill(0).map((x,i)=>i);
-    this.col2Counter = new Array(Math.round(this.thumbnailUrl.length/3)).fill(0).map((x,i)=>i+(this.thumbnailUrl.length/3));
-    this.col3Counter = new Array(Math.round(this.thumbnailUrl.length/3)).fill(0).map((x,i)=>i+(this.thumbnailUrl.length*2/3));
+    let offset = Math.floor(this.thumbnailUrl.length/3);
+    this.col2Counter = new Array(Math.round(this.thumbnailUrl.length/3)).fill(0).map((x,i)=>i+offset);
+    offset = Math.floor(this.thumbnailUrl.length*2/3)+1;
+    this.col3Counter = new Array(Math.round(this.thumbnailUrl.length/3)).fill(0).map((x,i)=>i+offset);
   }
 
 

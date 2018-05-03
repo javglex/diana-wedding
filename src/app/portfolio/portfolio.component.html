@@ -22,7 +22,7 @@
 </div>
 
 <div style="text-align: center;" *ngIf="isImageExpanded">
-  <div class="largeimagecontainer">
+  <div class="largeimagecontainer" >
     <div class="fas fa-window-close" (click) = "onImageHide()"></div>
     <img class="largeimage" src="{{expandedImage}}" alt="largeImage" >
     <div class="fas fa-chevron-left" (click) = "onBackPressed($event)"><p>back</p></div><div class="fas fa-chevron-right" (click) = "onNextPressed($event)" ><p>next</p></div>

@@ -41,6 +41,11 @@ export class WelcomeComponent implements OnInit {
   ngOnInit() {
 
     console.log(this.TAG,"ngOnInit fired");
+    if (event instanceof NavigationEnd){
+      if (event.url!="/about"){
+        return;
+      }
+    }
 
     this.loadWindowBasedImage();
 

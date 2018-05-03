@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostListener } from '@angular/core';
 
 @Component({
   selector: 'app-portfolio',
@@ -120,13 +120,32 @@ export class PortfolioComponent implements OnInit {
   }
 
   onBackPressed(event){
-    this.expandedImage=this.expandImageUrl[--this.index];
+    this.changeImage(--this.index);
     event.stopPropagation();
   }
 
   onNextPressed(event){
-    this.expandedImage=this.expandImageUrl[++this.index];
+    this.changeImage(++this.index);
     event.stopPropagation();
   }
 
+  changeImage(index:number){
+    if (index<=0)
+      this.index=0;
+    if (index>this.expandImageUrl.length-1)
+      this.index=this.expandImageUrl.length-1;
+
+    this.expandedImage=this.expandImageUrl[this.index];
+  }
+
+  @HostListener('document:keyup', ['$event'])
+  handleKeyboardEvent(event: KeyboardEvent) { 
+    console.log(this.TAG,"event key: "+event.key);
+
+    if (event.key=="ArrowLeft"){
+      this.changeImage(--this.index);
+    }else if (event.key=="ArrowRight"){
+      this.changeImage(++this.index);
+    }
+  }
 }

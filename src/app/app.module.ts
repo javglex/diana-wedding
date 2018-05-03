@@ -31,7 +31,7 @@ const appRoutes: Routes = [
   {path:'contact', component: ContactComponent},
   {path:'portfolio', component: PortfolioComponent},
   {path:'thankyou', component: ThankyouComponent},
-  {path:'*', component: WelcomeComponent}
+  {path:'**', redirectTo: ''}
 ];
 
 @NgModule({

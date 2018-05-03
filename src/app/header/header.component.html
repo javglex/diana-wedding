@@ -1,9 +1,9 @@
 <a  href="/" class="link"><img src="http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,w_688/v1519965140/diana_wedding/dianalogo.png" alt="logo"></a> <!-- logo also acts as a reset button for the page (reloads by not using routerLink) -->
 <nav class="navbar navbar-default navbar-fixed-top"
 [style.backgroundColor]="'rgba(212, 175, 55, '+opacityAmmount+')'"
-[ngClass]="{'sticky': isFixed, 'nonsticky':!isFixed }" role="navigation">
+[ngClass]="{'sticky': isFixed, 'nonsticky':!isFixed }" role="navigation"  *ngIf="enabled">
   
-  <div class="container" *ngIf="enabled">
+  <div class="container">
     <div class="navbar-header">
       <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#myNavbar" (click) = "isCollapsed = !isCollapsed">
         <span class="sr-only">Toggle navigation</span>

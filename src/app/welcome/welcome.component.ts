@@ -31,7 +31,7 @@ export class WelcomeComponent implements OnInit {
   constructor(public el: ElementRef, private landingSubject:LandingSubjectService, private router:Router) {
     this.router.events.subscribe((event)=>{
       if (event instanceof NavigationEnd){
-        if (event.url=="/about"){
+        if (event.urlAfterRedirects.indexOf("/about") > -1){
           this.hideLanding=true;
         }
       }
@@ -42,7 +42,7 @@ export class WelcomeComponent implements OnInit {
 
     console.log(this.TAG,"ngOnInit fired");
     if (event instanceof NavigationEnd){
-      if (event.url!="/about"){
+      if (event.urlAfterRedirects.indexOf("/about") <= -1){
         return;
       }
     }

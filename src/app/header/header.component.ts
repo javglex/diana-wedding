@@ -27,12 +27,13 @@ export class HeaderComponent implements OnInit {
     });
 
     this.router.events.subscribe((event)=>{
-      if (event instanceof NavigationStart){
-        console.log(this.TAG,event.url);
-        if (event.url!="/"){
+      console.log(this.TAG,"event: "+event);
+      if (event instanceof NavigationEnd){
+        if (event.urlAfterRedirects!="/" && event.urlAfterRedirects.indexOf("/#")<0){
           this.fadeIn();
         }
       }
+
     });
 
 

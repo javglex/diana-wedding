@@ -48,7 +48,7 @@ const appRoutes: Routes = [
     ThankyouComponent
   ],
   imports: [
-    BrowserModule.withServerTransition({appId:'wedding-app'}),
+    BrowserModule.withServerTransition({appId:'universal-wedding-app'}),
     HttpClientModule,
     ScrollToModule.forRoot(),
     RouterModule.forRoot(appRoutes),

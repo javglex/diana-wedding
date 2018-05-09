@@ -1,3 +1,14 @@
+a{
+    font-size:18px;
+}
+
+img{
+    position: relative;
+    margin:10px 0 10px 0;
+    z-index: 3;
+    height:100px;
+}
+
 .navbar {
     background-color: #FFF0F500;
     z-index: 3;
@@ -47,16 +58,6 @@
     vertical-align: top;
 }
 
-a{
-    font-size:18px;
-}
-
-img{
-    position: relative;
-    margin:10px 0 10px 0;
-    z-index: 3;
-    height:100px;
-}
 
 .active{
     background-color:	#fff;

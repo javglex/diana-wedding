@@ -110,6 +110,9 @@ hr{
 .reward12{
     grid-area: reward12;
 }
+.reward13{
+    grid-area: reward13;
+}
 
 .fa-chevron-left{
     position:relative;
@@ -138,7 +141,8 @@ hr{
     "reward5 reward6"
     "reward7 reward8"
     "reward9 reward10"
-    "reward11 reward12";
+    "reward11 reward12"
+    "reward13 reward13";
   }
 
 @media (min-width: 800px) {
@@ -150,7 +154,8 @@ hr{
         "reward1 reward2 reward3"
         "reward6 reward4 reward5"
         "reward7 reward8 reward12"
-        "reward10 reward11 reward9";
+        "reward10 reward11 reward9"
+        "reward13 reward13 reward13";
         }
 }
 

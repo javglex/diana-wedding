@@ -52,11 +52,7 @@ hr{
     width:10%;
 }
 
-.reviewcontainer{
-    grid-area: form;
-    min-height:25vh;
-    margin-top:4%;
-}
+
 
 .animcontainer{
     /** animation properties **/
@@ -67,53 +63,6 @@ hr{
 	-webkit-transition: all .250;
 	-moz-transition: all .250;
 }
-
-.reward{
-    text-align:center;
-    z-index  : 2;
-}
-
-.reward1{
-    grid-area: reward1;
-    z-index  : 2;
-}
-.reward2{
-    grid-area: reward2;
-}
-.reward3{
-    grid-area: reward3;
-}
-.reward4{
-    grid-area: reward4;
-}
-.reward5{
-    grid-area: reward5;
-}
-.reward6{
-    grid-area: reward6;
-}
-.reward7{
-    grid-area: reward7;
-}
-.reward8{
-    grid-area: reward8;
-}
-.reward9{
-    grid-area: reward9;
-}
-.reward10{
-    grid-area: reward10;
-}
-.reward11{
-    grid-area: reward11;
-}
-.reward12{
-    grid-area: reward12;
-}
-.reward13{
-    grid-area: reward13;
-}
-
 .fa-chevron-left{
     position:relative;
     right:15%;
@@ -129,12 +78,96 @@ hr{
     font-size:2em;
     color:#D4AF37;
 }
+.reward{
+    text-align:center;
+    z-index  : 2;
+}
+
+.reviewcontainer{
+    -ms-grid-row: 2;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: form;
+    min-height:25vh;
+    margin-top:4%;
+}
+
+.reward1{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
+    grid-area: reward1;
+    z-index  : 2;
+}
+.reward2{
+    -ms-grid-row: 1;
+    -ms-grid-column: 2;
+    grid-area: reward2;
+}
+.reward3{
+    -ms-grid-row: 3;
+    -ms-grid-column: 1;
+    grid-area: reward3;
+}
+.reward4{
+    -ms-grid-row: 3;
+    -ms-grid-column: 2;
+    grid-area: reward4;
+}
+.reward5{
+    -ms-grid-row: 4;
+    -ms-grid-column: 1;
+    grid-area: reward5;
+}
+.reward6{
+    -ms-grid-row: 4;
+    -ms-grid-column: 2;
+    grid-area: reward6;
+}
+.reward7{
+    -ms-grid-row: 5;
+    -ms-grid-column: 1;
+    grid-area: reward7;
+}
+.reward8{
+    -ms-grid-row: 5;
+    -ms-grid-column: 2;
+    grid-area: reward8;
+}
+.reward9{
+    -ms-grid-row: 6;
+    -ms-grid-column: 1;
+    grid-area: reward9;
+}
+.reward10{
+    -ms-grid-row: 6;
+    -ms-grid-column: 2;
+    grid-area: reward10;
+}
+.reward11{
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
+    grid-area: reward11;
+}
+.reward12{
+    -ms-grid-row: 7;
+    -ms-grid-column: 2;
+    grid-area: reward12;
+}
+.reward13{
+    -ms-grid-row: 8;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 2;
+    grid-area: reward13;
+}
 
 .wrapper {
+    display: -ms-grid;
     display: grid;
+    -ms-grid-columns: 2fr 2fr;
     grid-template-columns: 2fr 2fr;
+    grid-auto-rows: 180px -webkit-min-content 180px 180px 180px;
     grid-auto-rows: 180px min-content 180px 180px 180px;
-    grid-template-areas:
+        grid-template-areas:
     "reward1 reward2"
     "form form"
     "reward3 reward4"
@@ -147,15 +180,77 @@ hr{
 
 @media (min-width: 800px) {
     .wrapper {
+        -ms-grid-columns: 1fr 1fr 1fr;
         grid-template-columns: 1fr 1fr 1fr;
+        -ms-grid-rows: -webkit-min-content 180px 180px 180px;
+        -ms-grid-rows: min-content 180px 180px 180px;
+        grid-template-rows: -webkit-min-content 180px 180px 180px;
         grid-template-rows: min-content 180px 180px 180px;
-        grid-template-areas:
+            grid-template-areas:
         "form form form"
         "reward1 reward2 reward3"
         "reward6 reward4 reward5"
         "reward7 reward8 reward12"
         "reward10 reward11 reward9"
         "reward13 reward13 reward13";
+        }
+    .reviewcontainer {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
+        }
+    .reward1 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 1;
+        }
+    .reward2 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 2;
+        }
+    .reward3 {
+        -ms-grid-row: 2;
+        -ms-grid-column: 3;
+        }
+    .reward4 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 2;
+        }
+    .reward5 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 3;
+        }
+    .reward6 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+        }
+    .reward7 {
+        -ms-grid-row: 4;
+        -ms-grid-column: 1;
+        }
+    .reward8 {
+        -ms-grid-row: 4;
+        -ms-grid-column: 2;
+        }
+    .reward9 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 3;
+        }
+    .reward10 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+        }
+    .reward11 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 2;
+        }
+    .reward12 {
+        -ms-grid-row: 4;
+        -ms-grid-column: 3;
+        }
+    .reward13 {
+        -ms-grid-row: 6;
+        -ms-grid-column: 1;
+        -ms-grid-column-span: 3;
         }
 }
 

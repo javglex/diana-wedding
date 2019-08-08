@@ -1,4 +1,4 @@
-<a  href="/" class="link"><img src="http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,w_688/v1519965140/diana_wedding/dianalogo.png" alt="logo"></a> <!-- logo also acts as a reset button for the page (reloads by not using routerLink) -->
+<a  href="/" class="link"><img [ngClass]="{'collapse-img': isCollapsed, 'non-collapse-img':!isCollapsed }" src='https://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_603/v1564109038/diana_wedding/diana_logo.png' alt="logo"></a> <!-- logo also acts as a reset button for the page (reloads by not using routerLink) -->
 <nav class="navbar navbar-default navbar-fixed-top"
 [style.backgroundColor]="'rgba(212, 175, 55, '+opacityAmmount+')'"
 [ngClass]="{'sticky': isFixed, 'nonsticky':!isFixed }" role="navigation"  *ngIf="enabled">

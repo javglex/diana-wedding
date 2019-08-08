@@ -48,6 +48,7 @@ export class HeaderComponent implements OnInit {
   /** Actual fade in animation will be handled by css */
   fadeIn(){
     this.enabled=true;
+    this.isCollapsed=false;
     this.opacityAmmount=1;
   }
 
@@ -57,7 +58,7 @@ export class HeaderComponent implements OnInit {
     const scrollPosition = window.pageYOffset;
     console.log("scroll position:",scrollPosition);
     console.log("component position: ", componentPosition);
-    if (scrollPosition>100){
+    if (scrollPosition>0){
       this.isFixed = true;
     } else 
       this.isFixed = false;

@@ -2,11 +2,40 @@ a{
     font-size:18px;
 }
 
-img{
+.non-collapse-img{
     position: relative;
-    margin:10px 0 10px 0;
+    margin:-20px auto 0px auto;
+    bottom:-68px;
     z-index: 3;
-    height:100px;
+    height:180px;
+    background-position: center center;
+    max-height: 100%;
+    max-width: 100%;
+    /**animation properties**/
+    transition-property: all;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition: all .25s;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
+}
+
+.collapse-img{
+    position: relative;
+    margin:-68px auto 0px auto;
+    bottom:-68px;
+    z-index: 3;
+    height:250px;
+    background-position: center center;
+    max-height: 100%;
+    max-width: 100%;
+    /**animation properties**/
+    transition-property: all;
+    transition-duration: .25s;
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition: all .25s;
+    -webkit-transition: all .25s;
+    -moz-transition: all .25s;
 }
 
 .navbar {
@@ -23,7 +52,7 @@ img{
 
 .nonsticky{
     position: absolute;
-    margin-top:118px;
+    margin-top:0px;
     transition-property: background-color;
     transition-duration: 1s;
     transition-timing-function: cubic-bezier(0, 1, 0.5, 1);

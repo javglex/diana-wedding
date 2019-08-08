@@ -20,7 +20,7 @@ h2 {
 }
 
 body, html {
-    height: 100%;
+    height: auto;
 }
 
 .container-fluid {
@@ -31,7 +31,8 @@ body, html {
     /* Position and center the image to scale nicely on all screens */
     background: #FFF0F5;
     /* Set a specific height */
-    height: 80%;
+    height: 70%;
+
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
@@ -53,7 +54,6 @@ body, html {
 
     /* Set a specific height */
     height: 100%;
-
     /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;

@@ -15,6 +15,12 @@ h4, p, label{
 
 }
 
+.date-picker-group{
+    border: 1px solid rgb(204, 204, 204);
+    border-radius: 5px;
+    padding: 5px 10px 0 10px;
+}
+
 p{
     font-size: 16px;
     font-weight: 0.8;
@@ -25,7 +31,12 @@ i{
     font-weight: 0.1;
 }
 
+
 .container{
+    -ms-grid-row: 3;
+    -ms-grid-row-span: 3;
+    -ms-grid-column: 1;
+    -ms-grid-column-span: 3;
     width:90%;
     height:100%;
     grid-area: form;
@@ -36,6 +47,8 @@ i{
 }
 
 .reward1{
+    -ms-grid-row: 1;
+    -ms-grid-column: 1;
     grid-area: reward1;
     text-align:center;
     padding-top: 20%;
@@ -43,6 +56,8 @@ i{
 }
 
 .reward2{
+    -ms-grid-row: 1;
+    -ms-grid-column: 3;
     grid-area: reward2;
     text-align:center;
     padding-top: 20%;
@@ -50,6 +65,8 @@ i{
 }
 
 .reward3{
+    -ms-grid-row: 7;
+    -ms-grid-column: 1;
     grid-area: reward3;
     text-align:center;
     padding-top: 20%;
@@ -57,6 +74,8 @@ i{
 }
 
 .reward4{
+    -ms-grid-row: 7;
+    -ms-grid-column: 3;
     grid-area: reward4;
     text-align:center;
     padding-top: 20%;
@@ -64,20 +83,23 @@ i{
 }
 
 .footer{
+    -ms-grid-row:9 !important;
+    -ms-grid-column:1;
+    -ms-grid-column-span:3;
     grid-area:footer;
+    position: relative !important;
 }
 
-.date-picker-group{
-    border: 1px solid rgb(204, 204, 204);
-    border-radius: 5px;
-    padding: 5px 10px 0 10px;
-}
+
 
 .wrapper {
+    display: -ms-grid;
     display: grid;
     grid-gap: 20px;
+    -ms-grid-columns: 2fr 20px 2fr;
     grid-template-columns: 2fr 2fr;
     grid-auto-rows: 1fr 100vh 2fr 1fr 20px;
+    -ms-grid-rows:auto 20px auto 20px auto 20px auto 20px auto;
     grid-template-areas:
     "reward1 reward2"
     "form form"
@@ -88,8 +110,10 @@ i{
 
 @media (min-width: 800px) {
     .wrapper {
+        -ms-grid-columns: 1fr 20px 2fr 20px 1fr;
         grid-template-columns: 1fr 2fr 1fr;
         grid-auto-rows: 1fr 1fr 1fr 1fr 2fr 20px;
+        -ms-grid-rows:auto 20px auto 20px auto 20px auto 20px auto 20px auto 20px auto;
         grid-template-areas:
         "reward1 form x"
         "reward2 form x"
@@ -100,8 +124,45 @@ i{
         "footer footer footer";
     }
     .reward1{
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
         grid-area: reward1;
         text-align:center;
+    }
+    @media (min-width: 800px){
+    .reward1 {
+            -ms-grid-row: 1;
+            -ms-grid-column: 1;
+    }
+    }
+    .container {
+        -ms-grid-row: 1;
+        -ms-grid-row-span: 9;
+        -ms-grid-column: 3;
+        -ms-grid-column-span: 1;
+    }
+    .reward1 {
+        -ms-grid-row: 1;
+        -ms-grid-column: 1;
+    }
+    .reward2 {
+        -ms-grid-row: 3;
+        -ms-grid-column: 1;
+    }
+    .reward3 {
+        -ms-grid-row: 5;
+        -ms-grid-column: 1;
+    }
+    .reward4 {
+        -ms-grid-row: 7;
+        -ms-grid-row-span: 3;
+        -ms-grid-column: 1;
+    }
+    .footer {
+        -ms-grid-row:11 !important;
+        -ms-grid-row-span:3;
+        -ms-grid-column:1;
+        -ms-grid-column-span:5;
     }
 }
 

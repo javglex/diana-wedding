@@ -2,13 +2,14 @@
 <img style="position:absolute;" [src]="imageSources[1]"  hidden (error)="onImageLoadFail(1)" alt="...">
 <img style="position:absolute;" [src]="imageSources[2]"  hidden (error)="onImageLoadFail(2)" alt="...">
 <img style="position:absolute;" [src]="imageSources[3]"  hidden (error)="onImageLoadFail(3)" alt="...">
+<img style="position:absolute;" [src]="imageSources[4]"  hidden (error)="onImageLoadFail(4)" alt="...">
 
 <div *ngIf="!hideLanding" class="hero-solid" [style.maxHeight.%]="landingHeight">
   
   <div class="hero-image" [ngStyle]="{ 'background-image': 'url(' + selectedImageSource + ')'}" (click) = "onBackgroundClicked()">
     <div class="hero-jumbotron" [style.top.%]="topJumbo" (click)="onEvent($event)">
-      <h1>Simply Elegant</h1> 
-      <h4>How do you want to remember your wedding?</h4>
+      <!-- <h1>Simply Elegant</h1>  -->
+      <h1>How do you want to remember your wedding?</h1>
       <hr>
       <!--<button scrollTo scrollTargetSelector="#end-page" class="button" (click) = "onEnterSiteClicked()" ><span>Enter site</span></button>-->
       <button class="button" (click) = "onEnterSiteClicked()" ><span class="button-text">Enter site</span></button>

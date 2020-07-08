@@ -12,15 +12,16 @@ export class WelcomeComponent implements OnInit {
   TAG:string = "WelcomeComponent - ";
   topJumbo = 200;
   landingHeight=100;
-  imageTransSpeed=2000;
+  imageTransSpeed=2500;
   closeSlider=false;
   hideLanding=false;
 
   imageSources: string[] = [
-    'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_956,q_41/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
-    'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_494,q_44/v1519008595/landing_page/209-LN9_8719-Web.jpg',
-    'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1520916201/landing_page/DSC_3804.jpg',
-    'http://res.cloudinary.com/dustxxgvx/image/upload/c_crop,h_2002,w_3972/c_scale,h_815,q_39/v1519008643/diana_wedding/IMG_8139.jpg'
+    'https://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_956,q_41/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
+    'https://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_494,q_44/v1519008595/landing_page/209-LN9_8719-Web.jpg',
+    'https://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1520916201/landing_page/DSC_3804.jpg',
+    'https://res.cloudinary.com/dustxxgvx/image/upload/c_crop,h_2002,w_3972/c_scale,h_815,q_39/v1594085612/diana_wedding/IMG_8139.jpg',
+    'https://res.cloudinary.com/dustxxgvx/image/upload/v1594084548/landing_page/Simple-Joie-Simply-Elegant-270.jpg'
   ];
 
  changeImageInterval;
@@ -114,7 +115,8 @@ export class WelcomeComponent implements OnInit {
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_956,q_41/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_494,q_44/v1519008595/landing_page/209-LN9_8719-Web.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1520916201/landing_page/DSC_3804.jpg',
-          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1519008643/diana_wedding/IMG_8139.jpg'
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_815,q_39/v1594085612/diana_wedding/IMG_8139.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,q_39/v1594084548/landing_page/Simple-Joie-Simply-Elegant-270.jpg'
         ];
       }else 
       if (value > 700 && value <= 1400){
@@ -123,7 +125,9 @@ export class WelcomeComponent implements OnInit {
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1537,q_59/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_682,q_58/v1519008595/landing_page/209-LN9_8719-Web.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1603,q_60/v1520916201/landing_page/DSC_3804.jpg',
-          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1603,q_60/v1519008643/diana_wedding/IMG_8139.jpg'
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1603,q_60/v1594085612/diana_wedding/IMG_8139.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,q_70/v1594084548/landing_page/Simple-Joie-Simply-Elegant-270.jpg'
+
         ];
       }else
       if (value > 1400){
@@ -132,7 +136,9 @@ export class WelcomeComponent implements OnInit {
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1920,q_70/v1520914120/landing_page/Diana_Dorsey_Favorites-0038.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/v1519008595/landing_page/209-LN9_8719-Web.jpg',
           'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1920,q_70/v1520916201/landing_page/DSC_3804.jpg',
-          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1920,q_70/v1519008643/diana_wedding/IMG_8139.jpg'
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,h_1920,q_70/v1594085612/diana_wedding/IMG_8139.jpg',
+          'http://res.cloudinary.com/dustxxgvx/image/upload/c_scale,q_90/v1594084548/landing_page/Simple-Joie-Simply-Elegant-270.jpg'
+
         ];
       }
     }

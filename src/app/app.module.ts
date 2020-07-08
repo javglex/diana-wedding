@@ -24,7 +24,7 @@ import { ThankyouComponent } from './thankyou/thankyou.component';
 const appRoutes: Routes = [
   {path:'', component: WelcomeComponent},
   {path:'about', component: WelcomeComponent},
-  {path:'services', component: ServicesComponent},
+  {path:'planning', component: ServicesComponent},
   {path:'testimonials', component: TestimonialsComponent},
   {path:'contact', component: ContactComponent},
   {path:'portfolio', component: PortfolioComponent},

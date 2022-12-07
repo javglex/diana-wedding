@@ -34,7 +34,7 @@
     "bootstrap": "^3.3.7",
     "classlist.js": "^1.1.20150312",
     "core-js": "^2.4.1",
-    "express": "^4.16.3",
+    "express": "^4.17.3",
     "jquery": "^3.3.1",
     "ng2-scroll-to": "^1.0.7",
     "rxjs": "^5.5.6",

@@ -16,7 +16,7 @@
   "private": true,
   "dependencies": {
     "@angular/cdk": "^5.2.4",
-    "@angular/cli": "1.6.8",
+    "@angular/cli": "15.0.4",
     "@angular/common": "^5.2.0",
     "@angular/compiler": "^5.2.0",
     "@angular/compiler-cli": "^5.2.0",
@@ -38,14 +38,14 @@
     "jquery": "^3.3.1",
     "ng2-scroll-to": "^1.0.7",
     "rxjs": "^5.5.6",
-    "ts-loader": "^4.3.0",
+    "ts-loader": "^9.4.2",
     "typescript": "~2.5.3",
     "web-animations-js": "^2.3.2",
     "zone.js": "^0.8.19"
   },
   "devDependencies": {
     "@angular/animations": "^5.2.10",
-    "@angular/cli": "1.6.8",
+    "@angular/cli": "15.0.4",
     "@angular/compiler-cli": "^5.2.0",
     "@angular/language-service": "^5.2.0",
     "@angular/platform-server": "^6.0.0",
